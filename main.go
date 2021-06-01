@@ -14,6 +14,7 @@ import (
 const excelPath = "./testData2.xlsx"
 const excelSheet = "Sheet1"
 const testNum = 500000
+const date = "0601"
 var quadkeyList[3] string = [3]string {"133002112310210000", "133002022031110000", "132113311032111222"} // 東京，西宮，徳島
 // ===============
 
@@ -42,7 +43,7 @@ func main(){
 		c = i % 3
 
 		f.SetCellValue(excelSheet, "A"+strconv.Itoa(i+1), "0")
-		f.SetCellValue(excelSheet, "B"+strconv.Itoa(i+1), "test20210531-" + strconv.Itoa(i+1))
+		f.SetCellValue(excelSheet, "B"+strconv.Itoa(i+1), "test2021-" + date + "-" + strconv.Itoa(i+1))
 		f.SetCellValue(excelSheet, "C"+strconv.Itoa(i+1), random1)
 		f.SetCellValue(excelSheet, "D"+strconv.Itoa(i+1), random2)
 		f.SetCellValue(excelSheet, "E"+strconv.Itoa(i+1), quadkeyList[c])
